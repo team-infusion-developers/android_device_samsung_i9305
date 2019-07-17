@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/i9300
+LOCAL_PATH := device/samsung/i9305
 COMMON_PATH := device/samsung/smdk4412-common
 
 # Overlay

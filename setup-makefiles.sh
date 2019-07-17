@@ -16,6 +16,6 @@
 #
 
 set -e
-export DEVICE=i9300
+export DEVICE=i9305
 export VENDOR=samsung
 ./../smdk4412-common/setup-makefiles.sh $@

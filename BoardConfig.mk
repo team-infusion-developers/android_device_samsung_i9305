@@ -13,40 +13,41 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 include device/samsung/smdk4412-common/BoardCommonConfig.mk
 
-# Wifi
-WIFI_DRIVER_MODULE_PATH :=
+# Assert
+TARGET_OTA_ASSERT_DEVICE := m3,m3xx,i9305,GT-I9305
 
 # Bionic
 MALLOC_SVELTE := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 LIBART_IMG_BASE := 0x30000000
 
-# Graphics
-TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
-
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/i9300/bluetooth
-
-# Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := lineageos_i9300_defconfig
-
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/i9300/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/i9305/bluetooth
 
 # Cache
 BOARD_CACHEIMAGE_PARTITION_SIZE :=104857600
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
-# Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/i9300/rootdir/fstab.smdk4x12
-TARGET_RECOVERY_DENSITY := mdpi
-TARGET_USERIMAGES_USE_F2FS := true
-RECOVERY_FSTAB_VERSION := 2
+# Graphics
+TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
+
+# Kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
+TARGET_KERNEL_CONFIG := lineageos_i9305_defconfig
+
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/i9305/include
 
 # PowerHAL
 TARGET_POWERHAL_VARIANT := pegasusq
 
-# assert
-TARGET_OTA_ASSERT_DEVICE := m0,i9300,GT-I9300
+# Recovery
+TARGET_RECOVERY_FSTAB := device/samsung/i9305/rootdir/fstab.smdk4x12
+TARGET_RECOVERY_DENSITY := mdpi
+TARGET_USERIMAGES_USE_F2FS := true
+RECOVERY_FSTAB_VERSION := 2
+
+# Wifi
+WIFI_DRIVER_MODULE_PATH :=
