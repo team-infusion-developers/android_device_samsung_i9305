@@ -116,3 +116,7 @@ $(call inherit-product-if-exists, vendor/samsung/i9300/i9300-vendor.mk)
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
+
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2017-07-01
