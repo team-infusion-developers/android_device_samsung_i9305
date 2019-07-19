@@ -40,6 +40,10 @@ TARGET_KERNEL_CONFIG := lineageos_i9305_defconfig
 
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/i9305/include
 
+# Legacy BLOB Support
+TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
+    /system/lib/libsec-ril.so=19
+
 # PowerHAL
 TARGET_POWERHAL_VARIANT := pegasusq
 
@@ -50,6 +54,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 RECOVERY_FSTAB_VERSION := 2
 
 # RIL
+TARGET_DISABLE_ASHMEM_TRACKING := true
 BOARD_RIL_CLASS := ../../../device/samsung/i9305/ril
 
 # Wifi
